@@ -34,7 +34,7 @@ explicit `--index-url`.)
 | # | Module | Concept | Status |
 |---|--------|---------|--------|
 | 1 | [`01_train_from_scratch/`](01_train_from_scratch/) | Full training loop (forward → loss → backward → optimizer step) on a small CNN, from random init | done |
-| 2 | [`02_inference/`](02_inference/) | Loading a trained checkpoint and running inference-only (no grad, eval mode) | planned |
+| 2 | [`02_inference/`](02_inference/) | Loading a trained checkpoint and running inference-only (no grad, eval mode) | done |
 | 3 | [`03_finetune_pretrained/`](03_finetune_pretrained/) | Fine-tuning a pretrained ResNet18 on a small custom dataset — the real-world "retraining" pattern | planned |
 
 Each module folder gets its own short README once built, explaining the specific mechanics it's
