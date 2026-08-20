@@ -2,6 +2,7 @@ venv/
 __pycache__/
 *.pyc
 data/
+custom_data/
 checkpoints/
 *.pt
 *.pth
