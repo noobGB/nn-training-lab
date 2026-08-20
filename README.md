@@ -22,14 +22,18 @@ Setup:
 
 ```bash
 python -m venv venv
-./venv/Scripts/pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+./venv/Scripts/pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu
 ```
+
+(`requirements.txt` pins the exact CPU-build versions used to develop this repo; the `+cpu` local
+version suffix on torch/torchvision only resolves against PyTorch's own CPU wheel index, hence the
+explicit `--index-url`.)
 
 ## Modules
 
 | # | Module | Concept | Status |
 |---|--------|---------|--------|
-| 1 | [`01_train_from_scratch/`](01_train_from_scratch/) | Full training loop (forward → loss → backward → optimizer step) on a small CNN, from random init | planned |
+| 1 | [`01_train_from_scratch/`](01_train_from_scratch/) | Full training loop (forward → loss → backward → optimizer step) on a small CNN, from random init | done |
 | 2 | [`02_inference/`](02_inference/) | Loading a trained checkpoint and running inference-only (no grad, eval mode) | planned |
 | 3 | [`03_finetune_pretrained/`](03_finetune_pretrained/) | Fine-tuning a pretrained ResNet18 on a small custom dataset — the real-world "retraining" pattern | planned |
 
